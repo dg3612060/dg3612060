@@ -1,0 +1,31 @@
+total_amt=3400000
+password=8876
+a=1
+while a>0:
+    print("welcome to saitm bank")
+    print("1.withdraw money, 2.update password, 3.exit")
+    opt=int(input("enter your option(1,2 or 3): "))
+    if opt==1:
+        withdraw=int(input("how much do money do you want to withdraw?"))
+        print("collect your money.")
+        total_amt=total_amt-withdraw
+        x=input("do you want to see your balance?(y/n):")
+        if x=="y":
+            print(total_amt)
+        else:
+            continue
+
+
+    elif opt==2:
+        pswrd=int(input("enter your password"))
+        if pswrd==password:
+            p1=int(input("enter your new password:"))
+            p2=int(input("confirm your new password:"))
+            password=p2
+            print("your passsword hass been updated to:",password)
+        else:
+            print("your password do not match.")
+            print("please re-check your password")
+    elif opt==3:
+            print("thank you have a nice day.")
+            break
